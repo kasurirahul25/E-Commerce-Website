@@ -1,0 +1,97 @@
+/* Reset some basic styles */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Use border-box model for sizing */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Set default font for body */
+}
+
+header {
+    background-color: #f9f9f9; /* Set header background color */
+    border-bottom: 1px solid #ddd; /* Add bottom border to header */
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Align items vertically center */
+    padding: 20px; /* Add padding around navbar */
+}
+
+/* Left and right navigation items */
+.nav-left, .nav-right {
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Center align items vertically */
+}
+
+.nav-left li, .nav-right li {
+    list-style: none; /* Remove bullet points from list items */
+    margin: 0 50px; /* Set horizontal margin between items */
+}
+
+.nav-left li a, .nav-right li a {
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Make link text bold */
+    color: rgba(11, 11, 11, 0.617); /* Set link color */
+}
+
+.nav-left li a:hover, .nav-right li a:hover {
+    color: #070000; /* Change color on hover */
+    text-decoration: underline; /* this is for underline */
+    text-decoration-thickness: 2px; /* Set the thickness of the underline */
+    text-underline-offset: 10px; /* Space between text and underline */
+}
+
+/* Logo styling */
+.logo {
+    text-align: left; /* Center align the logo text */
+    font-size: 24px; /* Set font size for logo */
+    font-weight: bold; /* Make logo text bold */
+    letter-spacing: 10px; /* Add space between letters */
+}
+
+.logo img {
+    max-height: 70px; /* Limit maximum height of logo image */
+    max-width: 100%;  /* Ensure it scales properly */
+    height: auto;     /* Maintain aspect ratio */
+    width: auto;      /* Maintain aspect ratio */
+}
+
+/* Search input styling */
+
+/* Right navigation items */
+.nav-right {
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Center align items vertically */
+}
+
+/* Styles for individual list items */
+.nav-right li {
+    list-style: none; /* Remove bullet points from list items */
+    margin: 0 15px; /* Set horizontal margin between items */
+}
+
+/* Specific style for the LOG IN link */
+.nav-right li:first-child { /* Target the first li which is LOG IN */
+    margin-left: 0; /* Remove left margin */
+    margin-right: 20px; /* Set right margin to adjust spacing */
+    margin-right: 10;
+    
+}
+
+/* The search input styling */
+.search-input {
+    padding: 8px 40px 8px 40px; /* Adjust padding to fit the icon */
+    border: 2px solid #ccc; /* Set border for search input */
+    border-radius: 4px; /* Round the corners of the search input */
+    width: 200px; /* Adjust width as needed */
+    background-color: #fff; /* Set background color for the input */
+    background-image: url('IMG/search.png'); /* Background image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-position: 10px center; /* Position the icon inside the input */
+    background-size: 22px; /* Adjust size of the icon */
+}
