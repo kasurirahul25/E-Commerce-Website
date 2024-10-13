@@ -1,4 +1,15 @@
 /* Reset some basic styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Exo:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Onest:wght@100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Mono:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Qwitcher+Grypen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Qwitcher+Grypen:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,81 +17,98 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+  font-family: "Noto Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+
 }
 
 header {
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #ddd;
+    background-color: #ffffff;
+    border-bottom: 0px solid #ffffff;
+}
+.nav-left,
+.nav-right {
+    margin: 0; /* Remove margin from navigation items */
 }
 
+.nav-left li,
+.nav-right li {
+    margin: 0; /* Remove margin from list items */
+    padding: 0; /* Remove padding from list items */
+}
+/* Navbar styling */
 /* Navbar styling */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
+    font-family: "Noto Sans Mono", monospace;
+    margin-left: 35px;
 }
 
-.nav-left, .nav-right {
-    display: flex;
-    align-items: center;
-}
-
-.nav-left li, .nav-right li {
-    list-style: none;
-    margin: 0 51px; /* Reduced margin to prevent items from being too far apart */
-}
-
-.nav-left li a, .nav-right li a {
-    text-decoration: none;
-    font-weight: bold;
-    color: rgba(11, 11, 11, 0.617);
-}
-
-.nav-left li a:hover, .nav-right li a:hover {
-    color: #070000;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 5px;
-}
-
-/* Logo styling */
+/* Adjusted logo styling */
 .logo {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 5px;
+    margin-right: 0px; /* This pushes the logo to the far left */
+    max-height: 70px;
 }
 
 .logo img {
-    max-height: 50px;
-    max-width: 100%;
+    max-height: 80px;
+    max-width: 90%;
     height: auto;
     width: auto;
 }
 
-/* Search input styling */
+/* Left and right navigation styling */
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    font-variation-settings: "wdth" 100;
+}
+
+.nav-left li, .nav-right li {
+    list-style: none;
+    margin: 0 55px; /* Adjust margin between nav items */
+}
+
+.nav-left li a, .nav-right li a {
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    font-weight: 350;
+    color: #000000;
+}
+
+.nav-left li a:hover, .nav-right li a:hover {
+    color: #000000;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+/* Adjust search input */
 .search-input {
-    padding: 8px 40px 8px 40px;
-    border: 1px solid #c5b9b9;
-    border-radius: 5px;
-    width: 300px;
-    background-color: #e3e5e6fc;
-    background-image: url('IMG/search.png');
-    background-repeat: no-repeat;
-    background-position: 20px center;
-    background-size: 22px;
+    padding: 5px 55px; /* Adjusting padding for the search input */
+    border-radius: 0; /* Set to 0 to eliminate rounding */
+    width: 300px; /* Set the desired width */
+    background-color: #ece9e9fc; /* Background color */
+    background-image: url('IMG/search.png'); /* Search icon */
+    background-repeat: no-repeat; /* Prevent background from repeating */
+    background-position: 20px center; /* Position the icon */
+    background-size: 22px; /* Size of the icon */
+    margin-left: 0; /* Margin on the left */
+    border: 1px solid #ccc; /* Set border style, width, and color */
+}
+.search-input:focus {
+    border-color: #ffffff; /* Change border color when focused */
+    outline: none; /* Remove default outline */
 }
 
 /* Right navigation items */
 .nav-right li {
-    margin: 0 10px; /* Adjust spacing between right nav items */
-}
-
-/* Specific style for the LOG IN link */
-.nav-right li:first-child {
-    margin-right: 10px; /* Adjust spacing for login */
+    margin: 0 10px;
 }
 
 /* Responsive adjustments */
@@ -88,17 +116,304 @@ header {
     .navbar {
         flex-direction: column;
     }
-    
     .nav-left, .nav-right {
         flex-direction: column;
         align-items: flex-start;
     }
-    
-    .nav-right li {
-        margin-bottom: 10px; /* Adds space between items in mobile view */
-    }
-    
     .search-input {
         width: 100%;
     }
+}
+
+/* Container for the filter, product count, and slider */
+.filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* Filter button styles */
+.filter-button {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.filter-button i {
+    margin-right: 5px;
+}
+
+/* Product count styles */
+.product-count {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+/* Stylish slider container */
+.slider-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Slider input */
+.slider {
+    -webkit-appearance: none; /* For WebKit browsers */
+    appearance: none; /* Fallback for modern browsers */
+    width: 200px;
+    height: 2px; /* Thin black line */
+    background: black; /* Black line for the slider track */
+    outline: none;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* Customize the slider thumb (the vertical line |) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2px; /* Width of the vertical marker */
+    height: 14px; /* Height of the vertical marker */
+    background: black; /* Color of the vertical marker */
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.slider::-moz-range-thumb {
+    width: 4px; /* Width of the vertical marker */
+    height: 20px; /* Height of the vertical marker */
+    background: black; /* Color of the vertical marker */
+    cursor: pointer;
+    border-radius: 2px;
+}
+/* Container to hold the images */
+.product-gallery {
+    display: flex;
+    justify-content: space-between; /* Space between each image */
+    align-items: center; /* Align images vertically in the center */
+    gap: 30px; /* Add some gap between images */
+    padding: 20px;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+}
+
+/* Styling the product images */
+.argoid-product-image {
+    max-width: 355px; /* Set the max width for each image */
+    height: 500px; /* Maintain aspect ratio */
+    border-radius: 5px; /* Add some border-radius for smooth edges */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.product {
+    text-align: center;
+    width: 400px;
+}
+
+.argoid-product-image {
+    width: 200%;
+    height: 500px;
+}
+
+.product-info {
+    margin-top: 10px;
+}
+
+.price {
+    text-decoration: line-through;
+    color: red;
+}
+
+.discounted-price {
+    color: green;
+    font-weight: bold;
+}
+
+.discount {
+    color: #ff8800;
+}
+
+.best-price {
+    color: #000;
+    font-weight: bold;
+}
+.product-count{
+    font-family: "Noto Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 100;
+}
+.filter-button{
+    font-family: "Noto Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 100;
+
+}
+.argoid-card__price-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px; /* Adds spacing between elements */
+    /* No need for text-decoration here as it applies to individual elements */
+}
+
+.argoid-product-price--mrp {
+    text-decoration: line-through; /* Ensures MRP is struck-through */
+    color: #999;
+    font-size: 13px;
+}
+
+.argoid-product-price--sale-price {
+    font-weight: bold;
+    color: #afa9a9;
+    font-size: 1.1rem;
+}
+
+.argoid-product-discount {
+    color: rgb(195, 111, 111);
+    font-weight: bold;
+    font-size: 10px;
+}
+
+/* Ensure links have no underline */
+.argoid-unstyled-link {
+    text-decoration: none; /* Removes underline from anchor links */
+    color: inherit;
+}
+
+.product-info {
+    margin-top: 10px;
+    font-family: "Londrina Sketch", sans-serif;/* Specific font for product info */
+}
+
+.price {
+    font-weight: normal; /* Reset weight */
+    font-family: "Londrina Sketch", sans-serif;/* Font style for price */
+}
+
+.discounted-price {
+    color: green;
+    font-weight: bold;
+    font-family: "Arial", sans-serif; /* Font style for discounted price */
+}
+
+.product-count {
+    font-family: "Noto Sans Mono", monospace;
+    font-weight: 100;
+}
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.product {
+    text-align: center;
+    width: 400px;
+    font-family: "Qwitcher Grypen", cursive; /* Font for the entire product */
+    font-size: 2px;
+}
+
+.argoid-product-image {
+    width: 200%;
+    height: 500px;
+}
+
+.product-info {
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 20px;
+    font-size: 12px;
+    font-family: "Londrina Sketch", sans-serif;
+  font-weight: 400;
+}
+.product-info p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+.price {
+    font-weight: normal; 
+    font-family: "Courier New", monospace; /* Font style for price */
+}
+
+.discounted-price {
+    color: green;
+    font-weight: bold;
+    font-family: "Arial", sans-serif; /* Font style for discounted price */
+}
+
+.discount {
+    color: #ff8800;
+    font-size: 10px;
+}
+
+.best-price {
+    color: #000;
+    font-weight: bold;
+}
+
+
+.argoid-card__best-price{
+
+    color: rgb(128, 128, 224);
+}
+.argoid-card__best-price--main{
+
+    font-family: "Noto Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-size: 13px;
+  font-weight: 80;
+  font-style: normal;
+}
+
+.product-info{
+    font-family: "Noto Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 80;
+  font-style: normal;
+
+}
+.home {
+    padding: 10px 20px; /* Adds padding: 10px top & bottom, 20px left & right */
+    margin: 10px 0; /* Adds margin: 10px top & bottom, no margin left & right */
+    margin-left: 20px; /* Adds extra left margin */
+    margin-right: 20px; /* Adds extra right margin */
+    font-size: 14px; /* Sets a readable font size */
+     /* Dark grey color for text */
+    /* Light grey background for contrast */
+    text-align: left; /* Aligns text to the left */
+     /* Slight rounding of the corners */
+}
+
+.home p {
+    margin: 0; /* Removes any default margin from the <p> */
+    font-family: "Noto Sans Mono", monospace;
+}
+.nav-right a{
+    font-size: 12px;
+}
+.search-input{
+    font-size: 12px;
 }
