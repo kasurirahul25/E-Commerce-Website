@@ -72,7 +72,7 @@ header {
 /* Styles for individual list items */
 .nav-right li {
     list-style: none; /* Remove bullet points from list items */
-    margin: 0 15px; /* Set horizontal margin between items */
+    margin: 0 40px; /* Set horizontal margin between items */
 }
 
 /* Specific style for the LOG IN link */
@@ -86,12 +86,14 @@ header {
 /* The search input styling */
 .search-input {
     padding: 8px 40px 8px 40px; /* Adjust padding to fit the icon */
-    border: 2px solid #ccc; /* Set border for search input */
-    border-radius: 4px; /* Round the corners of the search input */
-    width: 200px; /* Adjust width as needed */
-    background-color: #fff; /* Set background color for the input */
+    border: 0px solid #c5b9b9; /* Set border for search input */
+    border-radius: 1px; /* Round the corners of the search input */
+    border-width: 1px;
+    
+    width: 300px; /* Adjust width as needed */
+    background-color: #e3e5e6fc; /* Set background color for the input */
     background-image: url('IMG/search.png'); /* Background image */
     background-repeat: no-repeat; /* Prevent repeating the image */
-    background-position: 10px center; /* Position the icon inside the input */
+    background-position: 20px center; /* Position the icon inside the input */
     background-size: 22px; /* Adjust size of the icon */
 }
