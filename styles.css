@@ -52,7 +52,7 @@ header {
 /* Adjusted logo styling */
 .logo {
     margin-right: 0px; /* This pushes the logo to the far left */
-    max-height: 70px;
+    max-height: 75px;
 }
 
 .logo img {
@@ -60,6 +60,7 @@ header {
     max-width: 90%;
     height: auto;
     width: auto;
+    cursor: pointer;
 }
 
 /* Left and right navigation styling */
@@ -72,7 +73,7 @@ header {
 
 .nav-left li, .nav-right li {
     list-style: none;
-    margin: 0 55px; /* Adjust margin between nav items */
+    margin: 0 38px; /* Adjust margin between nav items */
 }
 
 .nav-left li a, .nav-right li a {
@@ -82,7 +83,7 @@ header {
     color: #000000;
 }
 
-.nav-left li a:hover, .nav-right li a:hover {
+.nav-left li a:hover {
     color: #000000;
     text-decoration: underline;
     text-underline-offset: 5px;
@@ -168,7 +169,7 @@ header {
     -webkit-appearance: none; /* For WebKit browsers */
     appearance: none; /* Fallback for modern browsers */
     width: 200px;
-    height: 2px; /* Thin black line */
+    height: 1px; /* Thin black line */
     background: black; /* Black line for the slider track */
     outline: none;
     margin-right: 10px;
@@ -180,7 +181,7 @@ header {
     -webkit-appearance: none;
     appearance: none;
     width: 2px; /* Width of the vertical marker */
-    height: 14px; /* Height of the vertical marker */
+    height: 12px; /* Height of the vertical marker */
     background: black; /* Color of the vertical marker */
     cursor: pointer;
     border-radius: 2px;
@@ -417,3 +418,143 @@ header {
 .search-input{
     font-size: 12px;
 }
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Space between items */
+    cursor: pointer;
+}
+
+.product {
+    flex: 1 1 22%; /* Each product will take up 22% of the width */
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.product img {
+    width: 110%; /* Ensure the images are responsive */
+}
+
+.product-info {
+    text-align: center;
+}
+
+
+
+
+/* /////////////////////////////////////////////////////// */
+
+
+/* Navigation list container */
+.nav-left {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation items */
+.nav-left li {
+    display: inline-block;
+    position: relative;
+}
+
+/* Links inside the navigation */
+.nav-left li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    top: 60px;
+    display: block;
+    background-color: #ffffff;
+    color: rgb(82, 80, 80);
+    font-size: 16px;
+    /* font-family: "Noto Sans Mono", monospace; */
+}
+/* Positioning the dropdown container */
+/* Positioning the dropdown container */
+.dropdown-content {
+    display: none; /* Initially hidden */
+    position: fixed; /* Fix it to the viewport */
+    top: 89px; /* Adjust based on your navbar height */
+    left: 50%; /* Center horizontally in the viewport */
+    width: 100vw; /* Full viewport width */
+    transform: translateX(-50%); /* Center it relative to its width */
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000; /* Ensure it is on top of other content */
+}
+
+/* Dropdown items styling */
+.dropdown-items a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 8px 0;
+}
+
+/* Hover effect */
+.dropdown-items a:hover {
+    background-color: #f1f1f1;
+}
+/* Prevent scrolling when this class is applied */
+.no-scroll {
+    overflow: hidden;
+}
+
+
+/* Hidden class to hide the login form by default */
+.hidden {
+    display: none;
+}
+
+/* Login form styling */
+/* Login form styling */
+.login-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 500px; /* Adjust based on your page layout */
+    right: 1px; /* Adjust based on your page layout */
+    left: 500px;
+    width: 400px;
+    z-index: 1000;
+    overflow: hidden;
+    overflow: hidden;
+}
+
+/* Initially hide the login form */
+.hidden {
+    display: none;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form-input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+    overflow: hidden;
+}
+
+/* Disable scrolling on the body */
+

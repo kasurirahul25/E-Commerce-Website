@@ -11,14 +11,58 @@
 <body>
     <header>
         <nav class="navbar">
-            <!-- Left navigation items -->
             <ul class="nav-left">
-                <li><a href="#">MAN</a></li>
-                <li><a href="#">WOMEN</a></li>
-                <li><a href="#">KIDS</a></li>
-                <li><a href="#">FOOTWEAR</a></li>
+                <li class="dropdown">
+                    <a href="#" onclick="showDropdown(event, 'dropdown-man')">MAN</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" onclick="showDropdown(event, 'dropdown-women')">WOMEN</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" onclick="showDropdown(event, 'dropdown-kids')">KIDS</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" onclick="showDropdown(event, 'dropdown-footwear')">FOOTWEAR</a>
+                </li>
             </ul>
-
+        
+            <div id="dropdown-container" class="dropdown-content">
+                <div id="dropdown-man" class="dropdown-items">
+                    <a href="#">RARE RABBIT</a>
+                    <a href="#">GUILD</a>
+                    <a href="#">SALE</a>
+                    <a href="#">RARE RABBIT</a>
+                    <a href="#">GUILD</a>
+                    <a href="#">SALE</a>
+                    <a href="#">RARE RABBIT</a>
+                    <a href="#">GUILD</a>
+                    <a href="#">SALE</a>
+                    <a href="#">RARE RABBIT</a>
+                    <a href="#">GUILD</a>
+                    <a href="#">SALE</a>
+                    <a href="#">RARE RABBIT</a>
+                    <a href="#">GUILD</a>
+                    <a href="#">SALE</a>
+                </div>
+                <div id="dropdown-women" class="dropdown-items" style="display: none;">
+                    <a href="#">RARE RABBIT</a>
+                    <a href="#">kasuri</a>
+                    <a href="#">Rahul</a>
+                </div>
+                <div id="dropdown-kids" class="dropdown-items" style="display: none;">
+                    <a href="#">RARE RABBIT</a>
+                    <a href="#">zebra</a>
+                    <a href="#">my-coertn</a>
+                </div>
+                <div id="dropdown-footwear" class="dropdown-items" style="display: none;">
+                    <a href="#">RARE RABBIT</a>
+                    <a href="#">supra 2</a>
+                    <a href="#">mysouer 3</a>
+                </div>
+            </div>
+        
+        
+        
             <!-- Logo section -->
             <div class="logo">
                 <img src="https://thehouseofrare.com/cdn/shop/files/Frame_41820_480x.png?v=1720342909" alt="Logo">
@@ -28,12 +72,26 @@
             <ul class="nav-right">
                 <li>
                     <input type="text" class="search-input" placeholder="Search for jackets">
-                    
                 </li>
-                <li><a href="#">LOG IN</a></li>
+                <li><a href="#" id="login-toggle">LOG IN</a></li>
                 <li><a href="#">WISHLIST</a></li>
                 <li><a href="#">BAG (1)</a></li>
             </ul>
+            
+            <!-- Hidden login form -->
+            <div id="login-form" class="login-form hidden">
+                <form>
+                    <p> Welcome to the Burrow</p>
+                    <label for="email"></label>
+                    <input type="email" id="email" class="form-input" placeholder="Enter Mobile Number">
+                    <p> Notify me for any updates & Offers.</p>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" class="form-input" placeholder="Enter your password">
+                    
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+            </div>
+            
         </nav>
     </header>
     <div class = "home">
@@ -57,6 +115,7 @@
         </div>
 
     </div>
+    
     <div class="product-container">
         <div class="product">
             <img class="argoid-product-image show " srcset="https://cdn.shopify.com/s/files/1/0752/6435/files/HERO_7c109915-b917-440a-a14a-5fe90a7571ef_200x.jpg?v=1710235193 400w,https://cdn.shopify.com/s/files/1/0752/6435/files/HERO_7c109915-b917-440a-a14a-5fe90a7571ef_300x.jpg?v=1710235193 600w,https://cdn.shopify.com/s/files/1/0752/6435/files/HERO_7c109915-b917-440a-a14a-5fe90a7571ef_360x.jpg?v=1710235193 720w,https://cdn.shopify.com/s/files/1/0752/6435/files/HERO_7c109915-b917-440a-a14a-5fe90a7571ef_400x.jpg?v=1710235193 800w,https://cdn.shopify.com/s/files/1/0752/6435/files/HERO_7c109915-b917-440a-a14a-5fe90a7571ef_440x.jpg?v=1710235193 880w,https://cdn.shopify.com/s/files/1/0752/6435/files/HERO_7c109915-b917-440a-a14a-5fe90a7571ef_480x.jpg?v=1710235193 960w,https://cdn.shopify.com/s/files/1/0752/6435/files/HERO_7c109915-b917-440a-a14a-5fe90a7571ef_600x.jpg?v=1710235193 1200w,https://cdn.shopify.com/s/files/1/0752/6435/files/HERO_7c109915-b917-440a-a14a-5fe90a7571ef_700x.jpg?v=1710235193 1400w,https://cdn.shopify.com/s/files/1/0752/6435/files/HERO_7c109915-b917-440a-a14a-5fe90a7571ef_765x.jpg?v=1710235193 1530w,https://cdn.shopify.com/s/files/1/0752/6435/files/HERO_7c109915-b917-440a-a14a-5fe90a7571ef_800x.jpg?v=1710235193 1600w" alt="ABSTRACT PRINT SHIRT PAINTER - GREEN Rare Rabbit Men's Painter Green Viscose Fabric Half Sleeves Abstract Print Shirt image">
@@ -128,11 +187,432 @@
                 </div>
             </div>
         </div>
+        
+
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/products/IMG_0061_2e680144-fd4b-4e4d-99fc-2fa939084076_800x.jpg?v=1676529203" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/benedictbrown.webp?v=1726577977" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/hero_1e91c0ca-dd29-46bc-aaa6-4e905cbc9f7e_800x.jpg?v=1689767173" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/VALVE-NAVY8717HERO_800x.jpg?v=1695896142" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/hero-2_5acd3857-8ce0-4b66-a818-5a356a80cba5_800x.jpg?v=1689679144" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/H-_1_d54326dc-0d63-4f85-bbfc-7c46e8f516bb_800x.jpg?v=1719991994" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/Jersey---Green0009_800x.jpg?v=1691753838" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/Divi-light-grey-0230Hero_800x.jpg?v=1698904493" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/RITZBLACK05267_800x.jpg?v=1715680727" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/RITZBROWN02317_800x.jpg?v=1717404530" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/CHARLESBLACK__CHARLESBLACK05858_800x.jpg?v=1720762528" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/HONG-YELLOW0408_800x.jpg?v=1692783342" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/JOIBEIGE__5_800x.jpg?v=1721040899" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/memop-ls-mens-shirt-black27624_4d2d33de-3d2d-41bd-8666-63913395a6c2_800x.jpg?v=1719483741" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/TERRITTURQCC05093_800x.jpg?v=1715675991" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/RITZWHITE04944_800x.jpg?v=1715680806" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/POTEX-PEACH-00631_800x.jpg?v=1707305850" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/LINCOS-BROWN00250_038515a8-5f28-4456-b3cc-6f7fa1211212_800x.jpg?v=1710923814" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/IMG_0018_19_5edd9cae-d2bb-4db0-bc58-66e06edd8873_800x.jpg?v=1689141787" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/ETHNIC-LIGHT-BLUE00257HERO_800x.jpg?v=1699948678" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/ETHNIC-PINK00316HERO_800x.jpg?v=1699948706" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/ETHNIC--MAROON00689HERO_800x.jpg?v=1699948583" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/SPENCERYELLOW01869_800x.jpg?v=1718628974" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="product">
+            <img class="argoid-product-image show " src="https://cdn.shopify.com/s/files/1/0752/6435/files/PARCO-DARK-BEIGE-CCC4641_800x.jpg?v=1695643886" alt="SATIN STRETCH SHIRT HOLAND - BEIGE">
+            <div class="product-info">
+                <p>SATIN STRETCH SHIRT<br>HOLAND - BEIGE</p>
+                <div class="argoid-card__price-container argoid-card__price-container--show-discount">
+                    <a class="argoid-unstyled-link" href="https://thehouseofrare.com/collections/rr-sale-aug/products/benedict-mens-shirt-dark-grey">
+                        <span class="argoid-product-price argoid-product-price--mrp">₹ 3499</span>
+                        <span>₹ 1714</span>
+                        <span class="argoid-product-discount">51%</span>
+                    </a>
+                </div>
+                <div class="argoid-card__best-price">
+                    <span class="argoid-card__best-price--main">Best Price ₹ 1610</span>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+
+
+
+
+        
+
+
     </div>
+    
+    
 <script src="script.js"></script> <!-- Link to your script -->
 </body>
 </html>
-
-
-
 
