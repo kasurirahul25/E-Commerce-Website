@@ -479,7 +479,7 @@ header {
     width: 100vw; /* Full viewport width */
     transform: translateX(-50%); /* Center it relative to its width */
     background-color: #ffffff;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); */
     padding: 20px;
     z-index: 1000; /* Ensure it is on top of other content */
 }
@@ -528,7 +528,6 @@ header {
 .hidden {
     display: none;
 }
-
 .login-form form {
     display: flex;
     flex-direction: column;
@@ -537,7 +536,7 @@ header {
 
 .form-input {
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px 0; 
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -545,7 +544,7 @@ header {
 .submit-btn {
     background-color: #4CAF50;
     color: white;
-    padding: 10px;
+    padding: 10px; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -557,4 +556,3 @@ header {
 }
 
 /* Disable scrolling on the body */
-
